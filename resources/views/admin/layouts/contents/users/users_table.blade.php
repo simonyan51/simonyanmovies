@@ -12,34 +12,33 @@
                 <tr>
                     <th>Nickname</th>
                     <th>Email</th>
-                    <th>Orders</th>
                     <th>Register Date</th>
                     <th>Admin</th>
-                    <th>Edit / Delete</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach ($users as $user)
+                    @if($user -> id === Auth::user() -> id)
+                        @else
                 <tr>
                     <td>{{ $user -> name  }}</td>
                     <td>{{ $user -> email  }}</td>
-                    <td>...</td>
                     <td> {{ $user -> created_at  }} </td>
                     <td>{{ $user -> admin }}</td>
                     <th>
-                        <a href="/admin/users/{{$user -> id}}/edit" class="glyphicon glyphicon-pencil btn btn-default btn-sm"></a>
                         <a href="/admin/users/{{$user -> id}}/delete" class="glyphicon glyphicon-remove btn btn-default btn-sm"></a>
                     </th>
                 </tr>
+                    @endif
                 @endforeach
                 <tfoot>
                 <tr>
                     <th>Nickname</th>
                     <th>Email</th>
-                    <th>Orders</th>
                     <th>Register Date</th>
                     <th>Admin</th>
-                    <th>Edit / Delete</th>
+                    <th>Delete</th>
                 </tr>
                 </tfoot>
             </table>

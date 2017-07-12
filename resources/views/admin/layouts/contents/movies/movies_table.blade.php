@@ -25,7 +25,7 @@
                 <tbody>
                 @foreach($movies as $movie)
                 <tr>
-                    <td>{{$movie -> image_url}}</td>
+                    <td><img src="/loaded_images/{{$movie->image_url}}"/></td>
                     <td>{{$movie -> title}}</td>
                     <td>{{$movie -> year}}</td>
                     <td>{{$movie -> rating}}</td>

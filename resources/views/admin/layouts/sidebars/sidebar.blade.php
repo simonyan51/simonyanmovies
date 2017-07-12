@@ -39,8 +39,7 @@
                 <ul class="treeview-menu">
                     <li><a href="/admin/users"><i class="fa fa-circle-o"></i> Users Table</a></li>
                     <li><a href="/admin/movies"><i class="fa fa-circle-o"></i> Movies Table</a></li>
-                    <li><a href="admin/genres"><i class="fa fa-circle-o"></i> Genres Table</a></li>
-                    <li><a href="admin/orders"><i class="fa fa-circle-o"></i> Orders Table</a></li>
+                    <li><a href="/admin/genres"><i class="fa fa-circle-o"></i> Genres Table</a></li>
                 </ul>
             </li>
         </ul>

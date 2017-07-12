@@ -21,7 +21,7 @@ Route::get("/admin", "Admin\AdminController@index");
 
 Route::get("/admin/users", "Admin\UsersController@index");
 
-Route::get("/admin/users/{id}/edit", "Admin\UsersController@editIndex");
+Route::get("/admin/users/{id}/delete", "Admin\UsersController@delete");
 
 Route::get("/admin/movies", "Admin\MoviesController@index");
 

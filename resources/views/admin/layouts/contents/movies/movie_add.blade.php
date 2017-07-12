@@ -18,7 +18,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" name="addMovieForm" method="post" action="{{url('/admin/movies/add/add_movie')}}">
+        <form class="form-horizontal" name="addMovieForm" method="post" enctype="multipart/form-data" action="{{url('/admin/movies/add/add_movie')}}">
             <div class="box-body">
                 <div class="form-group">
                     <label for="input1" class="col-sm-2 control-label">Title</label>
@@ -81,7 +81,7 @@
                     <label for="input6" class="col-sm-2 control-label">Image</label>
 
                     <div class="col-sm-10">
-                        <input type="file" id="input6" name="image" name="title" placeholder="Image">
+                        <input type="file" accept=".png,.jpg" id="input6" name="image">
                     </div>
                 </div>
 

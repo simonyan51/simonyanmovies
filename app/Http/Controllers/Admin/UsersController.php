@@ -20,13 +20,9 @@ class UsersController extends Controller
         return view("admin.layouts.contents.users.users_table", ["users" => $this->users]);
     }
 
-    public function editIndex($id) {
-        $currentUser = $this -> users -> find($id);
-        dd($currentUser);
-    }
 
-    public function edit($id) {
-        $currentUser = $this -> users -> find($id);
-        dd($currentUser);
+    public function delete($id) {
+        User::find($id) -> forceDelete();
+        return redirect("/admin/users");
     }
 }

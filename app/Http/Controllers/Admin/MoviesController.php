@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Movie;
 use App\User;
 use Illuminate\Http\Request;
+use \Illuminate\Support\Facades\Input;
 
 class MoviesController extends Controller
 {
@@ -43,8 +44,16 @@ class MoviesController extends Controller
         $movie -> producer = $request -> producer;
         $movie -> starting = $request -> starting;
         $movie -> desc = $request -> desc;
-        $movie ->image_url = $request -> image;
 
+
+//        if( $request->hasFile('image') ) {
+//            $file = $request->file('image');
+//            dd($file);
+//            $file -> move(public_path("loaded_images"), $request -> image);
+//            $movie -> image_url = "/loaded_images/" + $request -> image;
+//
+//        }
+        $movie -> image_url = $request -> image;
         $movie -> save();
 
         return redirect("/admin/movies");
