@@ -27,15 +27,8 @@
                     <td> {{ $user -> created_at  }} </td>
                     <td>{{ $user -> admin }}</td>
                     <th>
-
-                        <button type="button" class="btn btn-default btn-sm" >
-                            <a href="/admin/users/{{$user -> id}}/edit" class="glyphicon glyphicon-pencil"></a>
-                        </button>
-
-                        <button type="button" class="btn btn-default btn-sm" href="/admin/users/{{$user -> id}}/delete">
-                            <a href="/admin/users/{{$user -> id}}/delete" class="glyphicon glyphicon-remove"></a>
-                        </button>
-
+                        <a href="/admin/users/{{$user -> id}}/edit" class="glyphicon glyphicon-pencil btn btn-default btn-sm"></a>
+                        <a href="/admin/users/{{$user -> id}}/delete" class="glyphicon glyphicon-remove btn btn-default btn-sm"></a>
                     </th>
                 </tr>
                 @endforeach

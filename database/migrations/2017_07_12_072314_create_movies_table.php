@@ -21,6 +21,7 @@ class CreateMoviesTable extends Migration
             $table->string('country');
             $table->string('length');
             $table->string('producer');
+            $table->string('desc');
             $table->string('image_url');
             $table->string("starting");
             $table->rememberToken();

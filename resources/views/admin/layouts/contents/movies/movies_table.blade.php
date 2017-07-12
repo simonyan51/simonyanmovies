@@ -3,7 +3,7 @@
 @section("movies_table")
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Movies Table</h3>
+            <h3 class="box-title">Movies Table &emsp;</h3>
                 <a href="/admin/movies/add" class="btn btn-info btn-lg">
                     <span class="glyphicon glyphicon-plus"></span> Add Movie
                 </a>
@@ -23,29 +23,23 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($movies as $movie)
                 <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                        Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                    <td>X</td>
+                    <td>{{$movie -> image_url}}</td>
+                    <td>{{$movie -> title}}</td>
+                    <td>{{$movie -> year}}</td>
+                    <td>{{$movie -> rating}}</td>
+                    <td>{{$movie -> country}}</td>
+                    <td>{{$movie -> length}}</td>
                     <th>
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-zoom-in"></span>
-                        </button>
+                            <a href="/admin/movies/{{$movie -> id}}/detail" class="glyphicon glyphicon-zoom-in btn btn-default btn-sm"></a>
 
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                        </button>
+                            <a href="/admin/movies/{{$movie -> id}}/edit" class="btn btn-default btn-sm glyphicon glyphicon-pencil"></a>
 
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </button>
+                            <a href="/admin/movies/{{$movie -> id}}/delete" class="glyphicon glyphicon-remove btn btn-default btn-sm"></a>
                     </th>
                 </tr>
+                @endforeach
                 <tfoot>
                 <tr>
                     <th>Image</th>

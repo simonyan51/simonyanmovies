@@ -21,6 +21,10 @@
 
             @yield("movie_add")
 
+            @yield("movie_detail")
+
+            @yield("movie_edit")
+
         </section>
         <!-- /.content -->
     </div>

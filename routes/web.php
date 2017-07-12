@@ -27,4 +27,14 @@ Route::get("/admin/movies", "Admin\MoviesController@index");
 
 Route::get("/admin/movies/add", "Admin\MoviesController@addIndex");
 
+Route::post("/admin/movies/add/add_movie", "Admin\MoviesController@add");
+
+Route::get("/admin/movies/{id}/detail", "Admin\MoviesController@detail");
+
+Route::get("/admin/movies/{id}/edit", "Admin\MoviesController@editIndex");
+Route::post("/admin/movies/{id}/edit/edit_movie", "Admin\MoviesController@edit");
+
+
+Route::get("/admin/movies/{id}/delete", "Admin\MoviesController@delete");
+
 Route::get('{path?}', 'ApplicationController@runApp');
